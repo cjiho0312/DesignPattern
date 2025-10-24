@@ -6,7 +6,7 @@ public class WeaponManager : MonoBehaviour
 {
     [SerializeField] List <Weapon> weaponList;
     int weaponIndex;
-    Weapon weapon;
+    public Weapon weapon;
 
     void Start()
     {
@@ -43,7 +43,7 @@ public class WeaponManager : MonoBehaviour
 
         weaponIndex++;
 
-        weaponIndex %= weaponList.Count;
+        weaponIndex = weaponIndex % weaponList.Count;
 
         weapon = weaponList[weaponIndex];
 
